@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="GB2312"?>
+<rss version="0.92">
+<channel>
+<title>Wakka - RecentChanges</title>
+<link>http://core.in/modules/wakka/</link>
+<description>Recent changes to the Wakka WakkaWiki</description>
+<language>en-us</language>
+<item>
+<title>aaa</title>
+<link>http://core.in/modules/wakka/aaa/show?time=2003-06-25+23%3A53%3A46</link>
+<description>2003-06-25 23:53:46 by admin</description>
+</item>
+<item>
+<title>HomePage</title>
+<link>http://core.in/modules/wakka/HomePage/show?time=2003-06-25+23%3A50%3A49</link>
+<description>2003-06-25 23:50:49 by admin</description>
+</item>
+<item>
+<title>北京</title>
+<link>http://core.in/modules/wakka/%B1%B1%BE%A9/show?time=2003-06-25+20%3A42%3A31</link>
+<description>2003-06-25 20:42:31 by admin</description>
+</item>
+<item>
+<title>RecentChanges</title>
+<link>http://core.in/modules/wakka/RecentChanges/show?time=2003-06-18+17%3A38%3A52</link>
+<description>2003-06-18 17:38:52 by WakkaInstaller</description>
+</item>
+<item>
+<title>RecentlyCommented</title>
+<link>http://core.in/modules/wakka/RecentlyCommented/show?time=2003-06-18+17%3A38%3A52</link>
+<description>2003-06-18 17:38:52 by WakkaInstaller</description>
+</item>
+<item>
+<title>PageIndex</title>
+<link>http://core.in/modules/wakka/PageIndex/show?time=2003-06-18+17%3A38%3A52</link>
+<description>2003-06-18 17:38:52 by WakkaInstaller</description>
+</item>
+<item>
+<title>WantedPages</title>
+<link>http://core.in/modules/wakka/WantedPages/show?time=2003-06-18+17%3A38%3A52</link>
+<description>2003-06-18 17:38:52 by WakkaInstaller</description>
+</item>
+<item>
+<title>OrphanedPages</title>
+<link>http://core.in/modules/wakka/OrphanedPages/show?time=2003-06-18+17%3A38%3A52</link>
+<description>2003-06-18 17:38:52 by WakkaInstaller</description>
+</item>
+<item>
+<title>TextSearch</title>
+<link>http://core.in/modules/wakka/TextSearch/show?time=2003-06-18+17%3A38%3A52</link>
+<description>2003-06-18 17:38:52 by WakkaInstaller</description>
+</item>
+<item>
+<title>MyPages</title>
+<link>http://core.in/modules/wakka/MyPages/show?time=2003-06-18+17%3A38%3A52</link>
+<description>2003-06-18 17:38:52 by WakkaInstaller</description>
+</item>
+<item>
+<title>MyChanges</title>
+<link>http://core.in/modules/wakka/MyChanges/show?time=2003-06-18+17%3A38%3A52</link>
+<description>2003-06-18 17:38:52 by WakkaInstaller</description>
+</item>
+</channel>
+</rss>

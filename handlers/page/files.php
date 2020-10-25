@@ -1,0 +1,67 @@
+<?php
+
+$file404 = 'images/upload404.gif';
+$file403 = 'images/upload403.gif';
+// 1. check existence
+if ($_GET['global']) {
+    $page_id = 0;
+} else {
+    $page_id = $this->page['id'];
+}
+$what = $this->LoadAll(
+    'select user, id, filename, filesize, description from ' . $this->config['table_prefix'] . 'upload where ' . "page_id = '" . quote($page_id) . "' and filename='" . quote($_GET['get']) . "'"
+);
+if (count($what) > 0) {
+    // 2. check rights
+
+    if ($this->IsAdmin() || ($desc['id'] && ($this->GetPageOwner($this->tag) == $this->GetUserName()))
+        || ($this->HasAccess('read'))
+        || ($desc['user'] == $this->GetUserName())) {
+        $filepath = $this->config['upload_path' . ($page_id ? '_per_page' : '')] . '/' . ($page_id ? ('@' . str_replace('/', '@', $this->supertag) . '@') : '') . $what[0]['filename'];
+    } else {
+        $error = 403;
+    }
+} else {
+    $error = 404;
+}
+// 3. passthru
+$ext_array = explode('.', $filepath ?: $_GET['get']);
+$extension = $ext_array[count($ext_array) - 1];
+if (('gif' == $extension) || ('jpg' == $extension) || ('png' == $extension)) {
+    $isimage = true;
+
+    header('Content-Type: image/jpeg');
+
+    if ($error) {
+        $filepath = 'images/upload' . $error . '.gif';
+
+        // header("HTTP/1.0 404 Not Found");
+    }
+}
+if ($filepath) {
+    if (!$isimage) {
+        header('Cache-control: private');
+
+        header('Content-Type: application/download');
+
+        header('Content-Disposition: attachment; filename=' . $what[0]['filename']);
+    }
+
+    $f = @fopen($filepath, 'rb');
+
+    @fpassthru($f);
+} elseif (404 == $error) {
+    if (function_exists('virtual')) {
+        header('HTTP/1.0 404 Not Found');
+    }
+
+    print($this->GetResourceValue('UploadFileNotFound'));
+} else {
+    if (function_exists('virtual')) {
+        header('HTTP/1.0 403 Forbidden');
+    }
+
+    print($this->GetResourceValue('UploadFileForbidden'));
+}
+// 4. die
+die();
